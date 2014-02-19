@@ -16,4 +16,6 @@ compile
 
 Pour produire les chapitres au format html, il suffit de lancer ```mvn clean compile```, le résultat est disponible sous ```target/html```
 
+Si vous n'aimez pas maven (commencez par demander pourquoi vous êtes sur ce repo), vous pouvez générer les fichiers html avec gradle : ```gradlew asciidoctor```, le résultat est produit dans ```build/docs```.
+
 Vous pouvez visualiser le contenu directement sur GitHub, ou consulter la [version HTML](https://apache-maven.ci.cloudbees.com/job/apache-maven-book/HTML/)

@@ -16,7 +16,6 @@
 				<executions>
 					<execution>
 						<id>copy-resources</id>
-						<!-- here the phase you need -->
 						<phase>validate</phase>
 						<goals>
 							<goal>copy-resources</goal>
@@ -25,7 +24,7 @@
 							<outputDirectory>${basedir}/target/html/images/illustrations</outputDirectory>
 							<resources>
 								<resource>
-									<directory>illustrations</directory>
+									<directory>${basedir}/src/main/asciidoc/illustrations</directory>
 								</resource>
 							</resources>
 						</configuration>
@@ -44,10 +43,9 @@
 							<goal>process-asciidoc</goal>
 						</goals>
 						<configuration>
-							<sourceDirectory>${basedir}</sourceDirectory>
-							<outputDirectory>target/html</outputDirectory>
+							<outputDirectory>${basedir}/target/html</outputDirectory>
 							<backend>html</backend>
-							<doctype>book</doctype>
+							<embedAssets>false</embedAssets>
 						</configuration>
 					</execution>
 				</executions>
